@@ -54,7 +54,7 @@ class GatestatusApplicationTests {
 	@Test
 	void getHelloTest(){
 		Hello hello = new Hello();
-		hello.getGreeting();
+		assertTrue(hello.getGreeting().isPresent());
 	}
 
 }

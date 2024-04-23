@@ -1,11 +1,15 @@
 package com.malik.gatestatus;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 import java.util.Optional;
 
 @Slf4j
+@Getter
+@AllArgsConstructor
 public enum Gates {
     GATE_A("gate A", "open", 1),
     GATE_B("gate B", "closed", 0),
@@ -15,25 +19,18 @@ public enum Gates {
     private final String status;
     private final int flag;
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public String getStatus() {
+//        return status;
+//    }
+//
+//    public int getFlag() {
+//        return flag;
+//    }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public int getFlag() {
-        return flag;
-    }
-
-
-
-    Gates(String name, String status, int flag) {
-        this.name = name;
-        this.status = status;
-        this.flag = flag;
-    }
 
     // Reverse lookup methods
     public static Optional<Gates> getEnumEvaluationByValue(String value) {
